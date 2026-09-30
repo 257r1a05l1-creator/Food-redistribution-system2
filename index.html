@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FoodBridge - Food Redistribution System</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">🍱 Food<span>Bridge</span></div>
+      <div class="nav-links">
+        <a href="#home">Home</a>
+        <a href="#donate">Donate Food</a>
+        <a href="#food">Available Food</a>
+        <a href="#dashboard">Dashboard</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div>
+        <p class="tag">FOOD REDISTRIBUTION SYSTEM</p>
+        <h1>Share Food.<br><span>Reduce Waste.</span><br>Feed Communities.</h1>
+        <p class="hero-text">FoodBridge connects food donors with NGOs, volunteers and people who need food, helping good food reach the right place instead of going to waste.</p>
+        <div class="buttons">
+          <a class="btn primary" href="#donate">Donate Food</a>
+          <a class="btn secondary" href="#food">Find Food</a>
+        </div>
+      </div>
+      <div class="hero-card">
+        <div class="food-icon">🍲</div>
+        <h3>Every meal can make a difference.</h3>
+        <p>Post surplus food and help someone in your community today.</p>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div><strong id="mealCount">1,250</strong><span>Meals Shared</span></div>
+      <div><strong>86</strong><span>Active Donors</span></div>
+      <div><strong>32</strong><span>NGO Partners</span></div>
+      <div><strong>94%</strong><span>Successful Pickups</span></div>
+    </section>
+
+    <section id="donate" class="section">
+      <div class="section-title">
+        <p class="tag">FOR DONORS</p>
+        <h2>Donate Surplus Food</h2>
+        <p>Tell us about food that is safe and available for redistribution.</p>
+      </div>
+      <form id="donationForm" class="form-card">
+        <div class="form-grid">
+          <label>Food Name<input id="foodName" required placeholder="e.g. Rice and curry"></label>
+          <label>Category
+            <select id="category" required>
+              <option value="">Select category</option>
+              <option>Cooked Meals</option><option>Fruits & Vegetables</option>
+              <option>Bakery</option><option>Packaged Food</option>
+            </select>
+          </label>
+          <label>Quantity<input id="quantity" required placeholder="e.g. 20 meals"></label>
+          <label>Available Until<input id="availableUntil" type="datetime-local" required></label>
+          <label class="full">Pickup Location<input id="location" required placeholder="Area / landmark"></label>
+          <label class="full">Additional Information<textarea id="notes" placeholder="Any useful information..."></textarea></label>
+        </div>
+        <button class="btn primary" type="submit">Publish Food Donation</button>
+        <p id="formMessage" class="message"></p>
+      </form>
+    </section>
+
+    <section id="food" class="section light">
+      <div class="section-title">
+        <p class="tag">AVAILABLE FOOD</p>
+        <h2>Find Food Near You</h2>
+        <p>Browse current donations and request a pickup.</p>
+      </div>
+      <div id="foodList" class="food-grid"></div>
+    </section>
+
+    <section id="dashboard" class="section">
+      <div class="section-title">
+        <p class="tag">DASHBOARD</p>
+        <h2>System Overview</h2>
+      </div>
+      <div class="dashboard-grid">
+        <div class="dash-card"><span>🍱</span><h3 id="totalDonations">12</h3><p>Total Donations</p></div>
+        <div class="dash-card"><span>📦</span><h3>8</h3><p>Active Requests</p></div>
+        <div class="dash-card"><span>🚚</span><h3>6</h3><p>Pickups Today</p></div>
+        <div class="dash-card"><span>🤝</span><h3>18</h3><p>Community Partners</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="logo">🍱 Food<span>Bridge</span></div>
+    <p>Technology connecting surplus food with communities in need.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
